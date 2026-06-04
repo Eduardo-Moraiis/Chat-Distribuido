@@ -1,0 +1,52 @@
+# --- IDEs e Editores ---
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.classpath
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# --- Java / Maven ---
+**/target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+.mvn/wrapper/maven-wrapper.jar
+# Não ignorar o mvnw e pom.xml, eles são necessários!
+
+# --- Node.js / Frontend (Vite) ---
+**/node_modules/
+**/dist/
+**/build/
+.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- Docker ---
+# Geralmente não ignoramos o docker-compose.yml,
+# mas ignoramos pastas de dados se você criou volumes locais
+**/postgres-data/
+**/mongo-data/
+
+# --- Sistema Operacional ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Logs e Temporários ---
+log/
+tmp/
+*.tmp
+*.bak

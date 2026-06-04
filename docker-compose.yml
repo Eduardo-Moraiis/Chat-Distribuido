@@ -1,0 +1,22 @@
+services:
+  # Banco para o Serviço de Autenticação
+  postgres-db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: "eduardo"
+      POSTGRES_PASSWORD: "mudar123"
+      POSTGRES_DB: auth_db
+    ports:
+      - "5435:5432"
+
+  # Banco para o Serviço de Mensagens
+  mongo-db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  # Message Broker para sincronizar instâncias do Chat (Escalabilidade)
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
