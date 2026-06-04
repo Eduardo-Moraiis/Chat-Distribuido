@@ -18,7 +18,6 @@
 *.ear
 *.log
 .mvn/wrapper/maven-wrapper.jar
-# Não ignorar o mvnw e pom.xml, eles são necessários!
 
 # --- Node.js / Frontend (Vite) ---
 **/node_modules/
@@ -35,8 +34,6 @@ yarn-error.log*
 .env.production.local
 
 # --- Docker ---
-# Geralmente não ignoramos o docker-compose.yml,
-# mas ignoramos pastas de dados se você criou volumes locais
 **/postgres-data/
 **/mongo-data/
 
