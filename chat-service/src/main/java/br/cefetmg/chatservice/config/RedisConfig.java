@@ -41,6 +41,8 @@ public class RedisConfig {
 
     @Bean
     public MessageListenerAdapter listenerAdapter(RedisReceiver receiver) {
-        return new MessageListenerAdapter(receiver, "receiveMessage");
+        MessageListenerAdapter adapter = new MessageListenerAdapter(receiver, "receiveMessage");
+        adapter.setSerializer(RedisSerializer.string());
+        return adapter;
     }
 }

@@ -31,6 +31,9 @@ class AuthServiceApplicationTests {
         // Criamos um usuário de teste
         User user = new User("teste_unitario", "Nome Teste", "senha123");
 
+        // Garante idempotência limpando o banco antes
+        userRepository.deleteById("teste_unitario");
+
         // Executamos o registro
         authService.register(user);
 

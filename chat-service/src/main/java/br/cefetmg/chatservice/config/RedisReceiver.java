@@ -21,6 +21,7 @@ public class RedisReceiver {
     private ObjectMapper objectMapper;
 
     public void receiveMessage(Object message) { // Mude para Object se der erro de cast
+        System.out.println("RedisReceiver receiveMessage chamado com: " + message);
         try {
             ChatMessage chatMessage;
 
